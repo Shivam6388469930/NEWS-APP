@@ -4,6 +4,9 @@ export class Newsitem extends Component {
   render() {
     let {title,description,urlToImage,url,author,date,source}=this.props
     return (   
+      
+      // creating news item
+
       <div className='container'>
          <div className="card" style={{width:"18rem"}}>
             <img src={!urlToImage?'src/component/spotify.jpg':urlToImage} className="card-img-top" alt="..."/>

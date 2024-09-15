@@ -117,8 +117,9 @@ export class News extends Component {
 
     this.setState({ loading: true })
     let data = await fetch(url);
+    this.props.setProgress(40)
     let parsedData = await data.json()
-
+    this.props.setProgress(70)
     this.setState({
       articles: parsedData.articles,
       loading: false,
@@ -157,7 +158,7 @@ export class News extends Component {
   render() {
     return (
       <>
-        <div className="container my-3 mt-5 ">
+        <div className="container my-3 mt-5 text-center ">
           <h1>News-Wala -Top Heading on { this.props.categry }</h1>
           
           {/* adding infinite scroll */}
@@ -174,7 +175,7 @@ export class News extends Component {
 
                 { this.state.articles.map((element) =>
 
-                  <div className="col-md-4 mb-20 " key={ element.title }>
+                  <div className="col-md-4 mb-3 " key={ element.title }>
                     <Newsitem title={ element.title ? element.title : "title is not found" } description={ element.description ? element.description : "description is not found " } urlToImage={ element.urlToImage ? element.urlToImage : "Image cannot load" } url={ element.url } author={ element.author } date={ element.publishedAt } source={ element.source.name } />
                   </div>
                 ) }
