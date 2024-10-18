@@ -158,7 +158,7 @@ export class News extends Component {
   render() {
     return (
       <>
-        <div className="container my-3 mt-5 text-center ">
+        <div className="container my-5  text-center ">
           <h1>News-Wala -Top Heading on { this.props.categry }</h1>
           
           {/* adding infinite scroll */}
