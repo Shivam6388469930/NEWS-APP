@@ -36,3 +36,268 @@
     transform: rotate(360deg);
   }
 }
+/* Add these styles to your main CSS file */
+
+/* Navbar improvements */
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  letter-spacing: 0.5px;
+}
+
+.nav-link {
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background-color: rgba(13, 110, 253, 0.2);
+  font-weight: 500;
+}
+
+/* Mobile specific improvements */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: #343a40;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-item {
+    margin-bottom: 0.5rem;
+  }
+  
+  .nav-link {
+    padding: 0.75rem 1rem !important;
+    border-radius: 0.5rem;
+  }
+}
+
+/* For better visual feedback */
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+
+/* Responsive spacing */
+@media (min-width: 992px) {
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: white;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 70%;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-padding-top: 70px; /* Adjust based on navbar height */
+}
+
+
+/* News Card Styles */
+.hover-shadow {
+  transition: all 0.3s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.hover-shadow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Card Image Overlay Effect */
+.card-img-top {
+  transition: transform 0.5s ease;
+}
+
+.hover-shadow:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Gradient Button */
+.btn-gradient {
+  background: linear-gradient(45deg, #007bff, #0056b3);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(45deg, #0056b3, #003d82);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Responsive Grid Layout */
+@media (min-width: 1400px) {
+  .news-grid .col {
+    flex: 0 0 calc(100% / 4);
+    max-width: calc(100% / 4);
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1399px) {
+  .news-grid .col {
+    flex: 0 0 calc(100% / 3);
+    max-width: calc(100% / 3);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .news-grid .col {
+    flex: 0 0 calc(100% / 2);
+    max-width: calc(100% / 2);
+  }
+}
+
+@media (max-width: 767px) {
+  .news-grid .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+/* Card Title Truncation */
+.card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Badge Styling */
+.badge {
+  font-size: 0.7rem;
+  padding: 0.35em 0.65em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+/* News Component Styles */
+.news-container {
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+/* Card grid animation */
+.row-cols-1 > .col {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.row-cols-sm-2 > .col {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.row-cols-md-3 > .col {
+  animation: fadeIn 1s ease-out;
+}
+
+.row-cols-lg-4 > .col {
+  animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Category badge styling */
+.category-badge {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Infinite scroll improvements */
+.infinite-scroll-component {
+  overflow: visible !important;
+}
+
+/* Loading spinner animation */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .display-6 {
+    font-size: 1.75rem;
+  }
+  
+  h2 {
+    font-size: 1.25rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card hover effects */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Responsive gutters */
+@media (max-width: 576px) {
+  .g-4 {
+    --bs-gutter-x: 1rem;
+    --bs-gutter-y: 1rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  .g-4 {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+  }
+}

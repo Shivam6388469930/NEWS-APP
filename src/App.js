@@ -2,6 +2,7 @@
 import React, { Component, useState } from 'react';
 import Navbar from './component/Navbar';
 import News from './component/News';
+import './App.css';
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,7 +12,7 @@ import LoadingBar from 'react-top-loading-bar'
 export default class App extends Component {
   
   state={
-    progress:10
+    progress:2
   }
   setProgress=(progress)=>{
     this.setState({progress:progress})
